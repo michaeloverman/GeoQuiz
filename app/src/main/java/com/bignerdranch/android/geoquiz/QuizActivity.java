@@ -13,6 +13,9 @@ public class QuizActivity extends AppCompatActivity {
     private static final String TAG = "QuizActivity";
     private static final String KEY_INDEX = "index";
 
+    private static final String KEY_INDEX = "index";
+    private static final String TAG = "QuizActivity";
+
     private Button mTrueButton;
     private Button mFalseButton;
     private ImageButton mNextButton;
@@ -78,6 +81,13 @@ public class QuizActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "onSaveInstanceState()");
+        outState.putInt(KEY_INDEX, mCurrentIndex);
     }
 
     private void updateQuestion() {
