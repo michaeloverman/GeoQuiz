@@ -10,9 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuizActivity extends AppCompatActivity {
-    private static final String TAG = "QuizActivity";
-    private static final String KEY_INDEX = "index";
-
     private static final String KEY_INDEX = "index";
     private static final String TAG = "QuizActivity";
 
@@ -109,12 +106,6 @@ public class QuizActivity extends AppCompatActivity {
         Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        Log.i(TAG, "onSavedInstanceState()");
-        outState.putInt(KEY_INDEX, mCurrentIndex);
-    }
     /*    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.quiz, menu);
